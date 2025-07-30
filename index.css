@@ -1,0 +1,15 @@
+* {
+    color: aqua;
+}
+
+#heading{
+    color: red;
+}
+
+#nestedheading{
+    color: pink;
+}
+
+#nestedheading2{
+    color:green;
+}
