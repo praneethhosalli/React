@@ -5,6 +5,9 @@
 // place.appendChild(heading);
 // apple.innerHTML = ("Praneeth");
 // place.appendChild(apple);
+import React from "react";
+import ReactDOM from "react-dom/client";
+
 
 const heading = React.createElement("h1" ,{id : "heading"} , "Hello from React")
 // console.log(heading)
@@ -26,7 +29,7 @@ const box = React.createElement(
      React.createElement("div",{id:"child2"} ,
         [React.createElement("h1" , {id:"nestedheading"} , 
             "Hello from Nested React") , React.createElement("h2" , {id:"nestedheading2"} , 
-            "Hello from Nested 2  React")]
+            "Hello from Nested 2  React ")]
          )
    ] )
 
