@@ -34,3 +34,7 @@ console.log(box);
 const place2 = ReactDOM.createRoot(document.getElementById("root2"));
 place2.render(box);
 
+
+
+
+
