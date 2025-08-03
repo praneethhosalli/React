@@ -20,17 +20,27 @@ const Middle = function(){
     );
 };
 
+// recat element
+
+const ele = (
+    <h4 id ="ele">React Element </h4>
+);
+
 const Tail = () => (
 
     <h4>Bye Bye </h4>
 
 );
 
+const number = 1000 ;
+
 const Headingcompoment2 = () =>(
 
     // component composition 
     <>
     < Head/>
+    <Head></Head>
+    {Head()}
     <div>  
         <h1>React funtional component 1 </h1> 
         <h1>React funtional component  2</h1>
@@ -40,10 +50,14 @@ const Headingcompoment2 = () =>(
 
     <div>  
         <h1>React funtional component1 </h1> 
+        {ele} 
         <h1>React funtional component2 </h1>
     </div>
 
     <Tail/>
+
+
+
     
     </>
    
