@@ -1,72 +1,64 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const h1 = (<h1> Namaste React using JSX</h1>);
-
-
-// react fun comp :
-
-const Head = () =>{
+const Header = () =>{
     return (
-    <h1>Hello World</h1>
+        <div className="Header">
+            <div className="Logo-container">
+                <img className="Logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-yPxmHYHF8tgtmWhpC59Jk2PLpzbxaL-9bA&s" />
+            </div>
+
+            <div className="Nav_items">
+                <ul>
+                    <li>Home</li>
+                    <li>Cart</li>
+                    <li>Contact Us</li>
+                    <li>About Us</li>
+                </ul>
+                
+            </div>
+        </div>
+
     )
-};
+}
 
-const Middle = function(){
-    return (
+const res_card = {
+    backgroundColor:"#f0f0f0"
+}
 
-        <h2>Middler</h2>
-
-    );
-};
-
-// recat element
-
-const ele = (
-    <h4 id ="ele">React Element </h4>
-);
-
-const Tail = () => (
-
-    <h4>Bye Bye </h4>
-
-);
-
-const number = 1000 ;
-
-const Headingcompoment2 = () =>(
-
-    // component composition 
-    <>
-    < Head/>
-    <Head></Head>
-    {Head()}
-    <div>  
-        <h1>React funtional component 1 </h1> 
-        <h1>React funtional component  2</h1>
-    </div>
-    
-    < Middle/>
-
-    <div>  
-        <h1>React funtional component1 </h1> 
-        {ele} 
-        <h1>React funtional component2 </h1>
+const Res_container = () =>(
+    <div className="Res_container" style={res_card} >
+        <img className="res-logo" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e0839ff574213e6f35b3899ebf1fc597" />
+        <h3 > Cinese Wok</h3>
     </div>
 
-    <Tail/>
+)
+
+const Body = ()=>(
+    <div className="Body">
+        <div className="Search-bar">
+            Search
+        </div>
+
+        <div className="res-container">
+            <Res_container/>
 
 
+        </div>
 
+    </div>
+)
+
+const Applayout = ()=>(
+    <div className="AppLayout">
+        <Header/>
+        <Body/>
+        
     
-    </>
-   
-  
+    </div>
 );
 
-// const Headingcompoment2 = ()=> <h1> React funtinal component </h1>;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(< Headingcompoment2/>);
+root.render(< Applayout/>);
 
