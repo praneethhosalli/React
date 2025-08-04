@@ -27,9 +27,12 @@ const res_card = {
 }
 
 const Res_container = () =>(
-    <div className="Res_container" style={res_card} >
+    <div className="res_card" style={res_card} >
         <img className="res-logo" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e0839ff574213e6f35b3899ebf1fc597" />
         <h3 > Cinese Wok</h3>
+        <h4>Cinese , Asian , Korean</h4>
+        <h4>4.6 stars</h4>
+        <h4>37</h4>
     </div>
 
 )
@@ -42,8 +45,31 @@ const Body = ()=>(
 
         <div className="res-container">
             <Res_container/>
-
-
+            <Res_container/>
+            <Res_container/>
+            <Res_container/>
+            <Res_container/>
+            <Res_container/>
+            <Res_container/>
+            <Res_container/>
+            <Res_container/>
+            <Res_container/>
+            <Res_container/>
+            <Res_container/>
+            <Res_container/>
+            <Res_container/>
+            <Res_container/>
+            <Res_container/>
+            <Res_container/>
+            <Res_container/>
+            <Res_container/>
+            <Res_container/>
+            <Res_container/>
+            <Res_container/>
+            <Res_container/>
+            <Res_container/>
+ 
+       
         </div>
 
     </div>
