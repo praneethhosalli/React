@@ -44,9 +44,15 @@
     cursor: pointer;
 }
 
-.Search-bar{
+/* .Filter{
+    margin: 10px;
+} */
+
+.Filter_button{
+    background-color:khaki;
     padding: 10px;
     margin: 10px;
+    cursor: pointer;
 }
 
 
