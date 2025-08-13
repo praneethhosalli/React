@@ -1,6 +1,7 @@
 import Res_card from "./Res_card";
 import reslist from "../../utils/mockdata";
 import { useState } from "react";
+import { useEffect } from "react";
 
 
 
@@ -79,11 +80,28 @@ import { useState } from "react";
 
 const Body = ()=>{
     const [listofres , setlistofres] = useState(reslist);
+
+    useEffect(() =>{
+        console.log("hello");
+        fetchData();
+    } ,[]);
+
+    const fetchData = async() => {
+    const data = await fetch(
+        "https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.3182993&lng=78.5721999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    );
+    
+    const json = await data.json();
+    setlistofres(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    console.log(json);
+};
+
+    console.log("byee");
     
     return (
-
-
+    
     <div className="Body">
+        
         <div className="Filter">
             <button className="Filter_button" onClick={()=>{
                 // setlistofres()
