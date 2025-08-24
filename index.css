@@ -1,74 +1,123 @@
-.Header{
-    display: flex;
-    justify-content:space-between;
-    border: 1px solid black;
+.Header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  align-items: center;
 }
 
-.Logo{
-    width: 100px;
-}
-.Body{
-    /* padding: 50px; */
-    margin: 50px;
-}
-
-
-.Nav_items>ul{
-    font-size: 25px;
-    display: flex;
-    list-style-type: none;
-   padding: 0px 50px;
-    
-}
-.Nav_items >ul> li{
-
-     padding: 10px;
-     margin: 10px;
-    
-}
-
-.res_card{
-    width: 200px;
-    /* height: 300px; */
-    padding:  10px ;
-    margin: 5px;
-    height:auto;
-    /* background-color:"f0f0f0"; */
-    background-color: #f0f0f0;
-
-    
-}
-
-.res_card:hover{
-    border: 1px solid black;
+.header-button{
+    background-color: rgb(241, 241, 59);
+    margin: 25px;
+    font-size: 22px;
+    width: 120px;
+    height: 80px;
     cursor: pointer;
+
+}
+
+.Logo {
+  width: 100px;
+}
+.Body {
+  /* padding: 50px; */
+  margin: 50px;
+}
+
+.Nav_items > ul {
+  font-size: 25px;
+  display: flex;
+  list-style-type: none;
+  padding: 0px 50px;
+  align-items: center;
+  
+}
+.Nav_items > ul > li {
+  padding: 10px;
+  margin: 10px;
+  
+}
+
+.res_card {
+  width: 200px;
+  /* height: 300px; */
+  padding: 10px;
+  margin: 5px;
+  height: auto;
+  /* background-color:"f0f0f0"; */
+  background-color: #f0f0f0;
+}
+
+.res_card:hover {
+  border: 1px solid black;
+  cursor: pointer;
 }
 
 /* .Filter{
     margin: 10px;
 } */
 
-.Filter_button{
-    background-color:khaki;
-    padding: 10px;
-    margin: 10px;
-    cursor: pointer;
+.Filter{
+  display: flex;
+  gap: 20px;
 }
 
-
-.res-logo{
-    width: 100%;
-    height: 180px;
-    /* height: 50%; */
-   
+.Filter_button {
+  background-color: khaki;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
 }
 
-.res-container{
-    display: flex;
-    flex-wrap: wrap;
+.search{
+  padding: 20px;
+  
+  
+  
 }
 
-.restaname{
-    font-size:25px;
+.search-box{
+  height: 30px;
+  width: 200px;
+  padding:  5px;
+
 }
 
+.searchbutton{
+  /* padding: 20px; */
+
+  width: 80px;
+  height: 30px;
+  
+}
+
+.res-logo {
+  width: 100%;
+  height: 180px;
+  /* height: 50%; */
+}
+
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.restaname {
+  font-size: 25px;
+}
+
+.shimmer-container {
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px;
+}
+ 
+
+.shimmer-card {
+  margin: 20px;
+  width: 200px;
+  height: 400px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin: 5px;
+}
