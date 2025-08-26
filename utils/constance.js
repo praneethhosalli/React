@@ -4,4 +4,6 @@ export const reslogo = "https://media-assets.swiggy.com/swiggy/image/upload/fl_l
 
 // 20.16.0
 
+export const menuApiUrl = "https://cors-anywhere.herokuapp.com/https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.3182993&lng=78.5721999&restaurantId="
+
 

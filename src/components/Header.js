@@ -1,5 +1,6 @@
 import { applogo } from "../../utils/constance";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const [btnname, setbtname] = useState("Login");
@@ -12,15 +13,21 @@ export const Header = () => {
 
       <div className="Nav_items">
         <ul>
-          <li>Home</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
           <li>Cart</li>
-          <li>Contact Us</li>
-          <li>About Us</li>
+          <li>
+            <Link to="/contact">Contact Us</Link>
+          </li>
+          <li>
+            <Link to="/about"> About Us</Link>
+          </li>
+
           <button
             className="header-button"
             onClick={() => {
-                btnname === "Login"?
-              setbtname("Logout"): setbtname("Login") ;
+              btnname === "Login" ? setbtname("Logout") : setbtname("Login");
             }}
           >
             {btnname}

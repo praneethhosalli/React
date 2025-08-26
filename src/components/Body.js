@@ -2,11 +2,11 @@ import Res_card from "./Res_card";
 import Shimmer from "./Shimmer";
 import { useState } from "react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [listofres, setlistofres] = useState([]);
-  const[filteredres , setfilteredres] = useState([]);
-
+  const [filteredres, setfilteredres] = useState([]);
 
   const [searchtext, setsearchtext] = useState("");
 
@@ -27,16 +27,15 @@ const Body = () => {
 
     setfilteredres(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-
     );
     console.log(json);
   };
 
   console.log("byee");
 
-  return listofres.length === 0 ? (
-    <Shimmer />
-  ) : (
+  if (listofres.length === 0) return <Shimmer />;
+
+  return (
     <div className="Body">
       <div className="Filter">
         {/* res-search */}
@@ -52,10 +51,10 @@ const Body = () => {
           <button
             className="searchbutton"
             onClick={() => {
-              const filteredres = listofres.filter((res) =>
+              const filter = listofres.filter((res) =>
                 res.info.name.toLowerCase().includes(searchtext.toLowerCase())
               );
-              setfilteredres(filteredres);
+              setfilteredres(filter);
             }}
           >
             Search
@@ -66,11 +65,8 @@ const Body = () => {
           className="Filter_button"
           onClick={() => {
             // setlistofres()
-            const top = listofres.filter(
-              (res) => res.info.avgRating > 4
-            );
+            const top = listofres.filter((res) => res.info.avgRating > 4);
             setfilteredres(top);
-            
           }}
         >
           Top Rated Restaurents
@@ -79,11 +75,14 @@ const Body = () => {
 
       <div className="res-container">
         {filteredres.map((i) => (
-          <Res_card key={i.info.id} resdata={i} />
+          <Link to ={"/restaurant/"+i.info.id} key={i.info.id} ><Res_card  resdata={i} /></Link>
         ))}
       </div>
     </div>
   );
 };
+
+
+
 
 export default Body;
