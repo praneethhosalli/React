@@ -1,5 +1,4 @@
 import { reslogo } from "../../utils/constance";
-
 const Res_card = ({resdata}) =>{
     // console.log(props);
     const{cloudinaryImageId ,name ,cuisines , avgRating,costForTwo  , locality } = resdata?.info;
