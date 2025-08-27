@@ -1,5 +1,6 @@
 import Res_card from "./Res_card";
 import Shimmer from "./Shimmer";
+import { resfetch } from "../../utils/constance";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -7,7 +8,6 @@ import { Link } from "react-router-dom";
 const Body = () => {
   const [listofres, setlistofres] = useState([]);
   const [filteredres, setfilteredres] = useState([]);
-
   const [searchtext, setsearchtext] = useState("");
 
   useEffect(() => {
@@ -17,7 +17,7 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.3182993&lng=78.5721999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      resfetch
     );
 
     const json = await data.json();
