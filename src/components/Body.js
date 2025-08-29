@@ -16,9 +16,7 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(
-      resfetch
-    );
+    const data = await fetch(resfetch);
 
     const json = await data.json();
     setlistofres(
@@ -75,14 +73,13 @@ const Body = () => {
 
       <div className="res-container">
         {filteredres.map((i) => (
-          <Link to ={"/restaurant/"+i.info.id} key={i.info.id} ><Res_card  resdata={i} /></Link>
+          <Link to={"/restaurant/" + i.info.id} key={i.info.id}>
+            <Res_card resdata={i} />
+          </Link>
         ))}
       </div>
     </div>
   );
 };
-
-
-
 
 export default Body;

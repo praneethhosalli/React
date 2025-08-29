@@ -31,12 +31,12 @@ const approuter = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <Contact />,     
+        element: <Contact />,
       },
       {
-        path:"/restaurant/:resid",
-        element : <RestaurantMenu/>
-      }
+        path: "/restaurant/:resid",
+        element: <RestaurantMenu />,
+      },
     ],
     errorElement: <Error />,
   },
