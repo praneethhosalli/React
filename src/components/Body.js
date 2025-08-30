@@ -63,11 +63,15 @@ const Body = () => {
           className="Filter_button"
           onClick={() => {
             // setlistofres()
+            if (filteredres.length < listofres.length){
+              setfilteredres(listofres);
+            } else{
             const top = listofres.filter((res) => res.info.avgRating > 4);
             setfilteredres(top);
+            }
           }}
         >
-          Top Rated Restaurents
+          {filteredres.length < listofres.length ? "show all res " : "Top Rated Res"}
         </button>
       </div>
 
