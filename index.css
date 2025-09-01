@@ -5,14 +5,13 @@
   align-items: center;
 }
 
-.header-button{
-    background-color: rgb(241, 241, 59);
-    margin-left: 30px;
-    font-size: 22px;
-    width: 120px;
-    height: 80px;
-    cursor: pointer;
-
+.header-button {
+  background-color: rgb(241, 241, 59);
+  margin-left: 30px;
+  font-size: 22px;
+  width: 120px;
+  height: 80px;
+  cursor: pointer;
 }
 
 .Logo {
@@ -29,12 +28,10 @@
   list-style-type: none;
   padding: 0px 50px;
   align-items: center;
-  
 }
 .Nav_items > ul > li {
   padding: 10px;
   margin: 10px;
-  
 }
 
 .res_card {
@@ -56,7 +53,7 @@
     margin: 10px;
 } */
 
-.Filter{
+.Filter {
   display: flex;
   gap: 20px;
 }
@@ -68,26 +65,21 @@
   cursor: pointer;
 }
 
-.search{
+.search {
   padding: 20px;
-  
-  
-  
 }
 
-.search-box{
+.search-box {
   height: 30px;
   width: 200px;
-  padding:  5px;
-
+  padding: 5px;
 }
 
-.searchbutton{
+.searchbutton {
   /* padding: 20px; */
 
   width: 80px;
   height: 30px;
-  
 }
 
 .res-logo {
@@ -111,7 +103,6 @@
   flex-wrap: wrap;
   margin: 50px;
 }
- 
 
 .shimmer-card {
   margin: 20px;
