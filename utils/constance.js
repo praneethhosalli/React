@@ -35,3 +35,30 @@ export const resfetch =
 // 9. **Clear and effective** - Code should be easy to read and understand
 
 // 10. **Step-by-step complexity** - Only move to the next level of complexity when the simple way genuinely can't work
+
+
+  //  MOUNTING (initial render)
+  //  ┌─────────────────────────────────┐
+  //  │ constructor()                   │
+  //  │   ↓                             │
+  //  │ render()                        │
+  //  │   ↓                             │
+  //  │ React updates DOM               │
+  //  │   ↓                             │
+  //  │ componentDidMount()             │
+  //  └─────────────────────────────────┘
+
+  //  UPDATING (on state/props change)
+  //  ┌─────────────────────────────────┐
+  //  │ render()                        │
+  //  │   ↓                             │
+  //  │ React updates DOM               │
+  //  │   ↓                             │
+  //  │ componentDidUpdate(prevProps,   │
+  //  │                   prevState)    │
+  //  └─────────────────────────────────┘
+
+  //  UNMOUNTING (when removed)
+  //  ┌─────────────────────────────────┐
+  //  │ componentWillUnmount()          │
+  //  └─────────────────────────────────┘
