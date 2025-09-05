@@ -36,6 +36,7 @@ export const resfetch =
 
 // 10. **Step-by-step complexity** - Only move to the next level of complexity when the simple way genuinely can't work
 
+/// lec 08 
 
   //  MOUNTING (initial render)
   //  ┌─────────────────────────────────┐
