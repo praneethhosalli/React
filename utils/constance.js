@@ -12,7 +12,7 @@ export const menuApiUrl =
 export const resfetch =
   "https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.3182993&lng=78.5721999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 
-// Instructions to Github copilot
+// Instructions to Github copilot   
 
 // When helping with code:
 
