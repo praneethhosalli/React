@@ -2,14 +2,14 @@ import { applogo } from "../../utils/constance";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import useOnline from "../../utils/useOnline";
+
 export const Header = () => {
   const [btnname, setbtname] = useState("Login");
 
-  //   const handleHomeClick = () => {
-  //   if (window.location.pathname === "/") {
-  //     window.location.reload();
-  //   }
-  // };
+  const onlinestatus = useOnline();
+
+
 
   return (
     <div className="Header">
@@ -21,7 +21,14 @@ export const Header = () => {
       <div className="Nav_items">
         <ul>
           <li>
+            Online Status : {onlinestatus ? "🟢"   :  "🔴" }
+
+          </li>
+          <li>
             <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/grocery">Grocery</Link>
           </li>
           <li>Cart</li>
           <li>
