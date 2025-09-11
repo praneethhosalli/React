@@ -1,4 +1,5 @@
 import Res_card from "./Res_card";
+import useOnline from "../../utils/useOnline";
 import Shimmer from "./Shimmer";
 import { resfetch } from "../../utils/constance";
 import { useState } from "react";
@@ -28,6 +29,12 @@ const Body = () => {
     );
     // console.log(json);
   };
+
+  const onlineStatus = useOnline();
+
+  if (onlineStatus === false) {
+    return <h1>Looks like u are offline :( Pls check ur internet </h1>;
+  }
 
   console.log("byee");
 
@@ -75,8 +82,6 @@ const Body = () => {
             ? "Show all res "
             : "Show only top rated res"}
         </button>
-
-        
       </div>
 
       <div className="res-container">
