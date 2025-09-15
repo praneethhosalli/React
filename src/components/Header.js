@@ -9,8 +9,6 @@ export const Header = () => {
 
   const onlinestatus = useOnline();
 
-
-
   return (
     <div className="Header">
       <div className="Logo-container">
@@ -20,10 +18,7 @@ export const Header = () => {
       </div>
       <div className="Nav_items">
         <ul>
-          <li>
-            Online Status : {onlinestatus ? "🟢"   :  "🔴" }
-
-          </li>
+          <li>Online Status : {onlinestatus ? "🟢" : "🔴"}</li>
           <li>
             <Link to="/">Home</Link>
           </li>

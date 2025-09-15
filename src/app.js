@@ -34,15 +34,13 @@ const approuter = createBrowserRouter([
       },
       {
         path: "/grocery",
-        element: 
-        
-        // <Grocery/>
-        
-        (
+        element: (
+          // <Grocery/>
+
           <Suspense fallback={<Shimmer></Shimmer>}>
             <Grocery />
           </Suspense>
-        )
+        ),
       },
       {
         path: "/contact",
