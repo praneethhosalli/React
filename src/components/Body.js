@@ -47,7 +47,7 @@ const Body = () => {
         <div className="search">
           <input
             type="text"
-            className="search-box border-2 m-4 w-xl p-2 "
+            className="search-box rounded border-2 m-4 w-xl p-2 "
             value={searchtext}
             onChange={(e) => {
               setsearchtext(e.target.value);
@@ -84,9 +84,9 @@ const Body = () => {
         </button>
       </div>
 
-      <div className="res-container flex">
+      <div className="res-container flex flex-wrap  ">
         {filteredres.map((i) => (
-          <Link to={"/restaurant/" + i.info.id} key={i.info.id}>
+          <Link className=" hover:scale-110 m-2 p-2 w-55 h-auto flex-wrap rounded-xl bg-gray-100 " to={"/restaurant/" + i.info.id} key={i.info.id}>
             <Res_card resdata={i} />
           </Link>
         ))}
