@@ -41,20 +41,20 @@ const Body = () => {
   if (listofres.length === 0) return <Shimmer />;
 
   return (
-    <div className="Body">
-      <div className="Filter">
+    <div className="Body m-4 p-4">
+      <div className="Filter flex gap-4">
         {/* res-search */}
         <div className="search">
           <input
             type="text"
-            className="search-box"
+            className="search-box border-2 m-4 w-xl p-2 "
             value={searchtext}
             onChange={(e) => {
               setsearchtext(e.target.value);
             }}
           />
           <button
-            className="searchbutton"
+            className="searchbutton  w- "
             onClick={() => {
               const filter = listofres.filter((res) =>
                 res.info.name.toLowerCase().includes(searchtext.toLowerCase())
@@ -62,12 +62,12 @@ const Body = () => {
               setfilteredres(filter);
             }}
           >
-            Search
+            🔍
           </button>
         </div>
         {/* top-res-filter */}
         <button
-          className="Filter_button"
+          className="Filter_button border-2 rounded-2xl m-2 p-2"
           onClick={() => {
             // setlistofres()
             if (filteredres.length < listofres.length) {
@@ -79,12 +79,12 @@ const Body = () => {
           }}
         >
           {filteredres.length < listofres.length
-            ? "Show all res "
-            : "Show only top rated res"}
+            ? "Show all res  "
+            : "Show only top rated res ⭐"}
         </button>
       </div>
 
-      <div className="res-container">
+      <div className="res-container flex">
         {filteredres.map((i) => (
           <Link to={"/restaurant/" + i.info.id} key={i.info.id}>
             <Res_card resdata={i} />

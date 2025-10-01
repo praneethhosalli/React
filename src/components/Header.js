@@ -10,15 +10,16 @@ export const Header = () => {
   const onlinestatus = useOnline();
 
   return (
-    <div className="Header">
-      <div className="Logo-container">
+    <div className="Header flex justify-between items-center shadow-lg bg-amber-200">
+      <div className="Logo-container w-30">
         <Link to="/">
           <img className="Logo" src={applogo} />
         </Link>
       </div>
-      <div className="Nav_items">
-        <ul>
+      <div className="Nav_items m-4 ">
+        <ul className="flex  gap-6 text-xl  ">
           <li>Online Status : {onlinestatus ? "🟢" : "🔴"}</li>
+
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -34,7 +35,6 @@ export const Header = () => {
           </li>
 
           <button
-            className="header-button"
             onClick={() => {
               btnname === "Login" ? setbtname("Logout") : setbtname("Login");
             }}
