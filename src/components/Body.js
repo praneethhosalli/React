@@ -12,7 +12,7 @@ const Body = () => {
   const [searchtext, setsearchtext] = useState("");
 
   useEffect(() => {
-    console.log("hello");
+    // console.log("hello");
     fetchData();
   }, []);
 
@@ -27,7 +27,7 @@ const Body = () => {
     setfilteredres(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    console.log(json);
+    // console.log(json);
   };
 
   const onlineStatus = useOnline();
@@ -36,7 +36,7 @@ const Body = () => {
     return <h1>Looks like u are offline :( Pls check ur internet </h1>;
   }
 
-  if (listofres.length === 0) return <Shimmer />;
+  if (!listofres ) return <Shimmer />;
 
   return (
     <div className="Body m-4 p-4">
@@ -93,7 +93,7 @@ const Body = () => {
       <div className="res-container flex flex-wrap  ">
         {filteredres.map((i) => (
           <Link
-            className=" m-2 hover:scale-110  p-2 w-55 h-auto flex-wrap rounded-xl bg-gray-100 "
+            className=" m-2 hover:scale-110  p-2 w-55 h-auto flex-wrap rounded-xl bg-gray-200 "
             to={"/restaurant/" + i.info.id}
             key={i.info.id}
           >
