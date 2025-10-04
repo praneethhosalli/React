@@ -17,7 +17,7 @@ export const Header = () => {
         </Link>
       </div>
       <div className="Nav_items m-4 ">
-        <ul className="flex  gap-6 text-xl  ">
+        <ul className="flex  gap-6 text-xl font-semibold  ">
           <li>Online Status : {onlinestatus ? "🟢" : "🔴"}</li>
 
           <li>
