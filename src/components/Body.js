@@ -36,8 +36,6 @@ const Body = () => {
     return <h1>Looks like u are offline :( Pls check ur internet </h1>;
   }
 
-  console.log("byee");
-
   if (listofres.length === 0) return <Shimmer />;
 
   return (
@@ -47,24 +45,32 @@ const Body = () => {
         <div className="search">
           <input
             type="text"
-            className="search-box rounded border-2 m-4 w-xl p-2 "
+            className="search-box rounded border-2 m-4 w-xl p-2"
             value={searchtext}
             onChange={(e) => {
-              setsearchtext(e.target.value);
-            }}
-          />
-          <button
-            className="searchbutton  w- "
-            onClick={() => {
+              const value = e.target.value;
+              setsearchtext(value);
               const filter = listofres.filter((res) =>
-                res.info.name.toLowerCase().includes(searchtext.toLowerCase())
+                res.info.name.toLowerCase().includes(value.toLowerCase())
               );
               setfilteredres(filter);
             }}
+          />
+          <button
+            className="searchbutton"
+            onClick={() => {
+              // const filter = listofres.filter((res) =>
+              //   res.info.name.toLowerCase().includes(searchtext.toLowerCase())
+              // );
+
+              setfilteredres(listofres)
+              // setfilteredres(filter);
+            }}
           >
-            🔍
+            ↩
           </button>
         </div>
+
         {/* top-res-filter */}
         <button
           className="Filter_button border-2 rounded-2xl m-2 p-2"
@@ -86,7 +92,11 @@ const Body = () => {
 
       <div className="res-container flex flex-wrap  ">
         {filteredres.map((i) => (
-          <Link className=" hover:scale-110 m-2 p-2 w-55 h-auto flex-wrap rounded-xl bg-gray-100 " to={"/restaurant/" + i.info.id} key={i.info.id}>
+          <Link
+            className=" m-2 hover:scale-110  p-2 w-55 h-auto flex-wrap rounded-xl bg-gray-100 "
+            to={"/restaurant/" + i.info.id}
+            key={i.info.id}
+          >
             <Res_card resdata={i} />
           </Link>
         ))}
