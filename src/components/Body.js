@@ -36,16 +36,19 @@ const Body = () => {
     return <h1>Looks like u are offline :( Pls check ur internet </h1>;
   }
 
+
+  if (listofres.length === 0) return <Shimmer />;
   if (!listofres ) return <Shimmer />;
+  if(listofres === null) return <Shimmer />;
 
   return (
-    <div className="Body m-4 p-4">
+    <div className="Body m-8  p-4">
       <div className="Filter flex gap-4">
         {/* res-search */}
         <div className="search">
           <input
             type="text"
-            className="search-box rounded border-2 m-4 w-xl p-2"
+            className="search-box rounded border-2 border-gray-500 m-4 w-xl p-2"
             value={searchtext}
             onChange={(e) => {
               const value = e.target.value;
@@ -73,7 +76,7 @@ const Body = () => {
 
         {/* top-res-filter */}
         <button
-          className="Filter_button border-2 rounded-2xl m-2 p-2"
+          className="Filter_button border-2 border-gray-500 rounded-2xl m-2 p-2"
           onClick={() => {
             // setlistofres()
             if (filteredres.length < listofres.length) {
